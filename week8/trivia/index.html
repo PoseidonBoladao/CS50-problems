@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener("DOMContentLoaded", function() {
+                let answers = document.querySelectorAll(".answer");
+                answers.forEach(function(element) {
+                    element.addEventListener("click", function() {
+                        answers.forEach(function(element) {
+                            element.style.backgroundColor = "#d9edff";
+                        })
+                        if (element.innerHTML == "Zea mays") {
+                            element.style.backgroundColor = "green";
+                            document.querySelector("#feedback1").innerHTML = "Correct!";
+                        } else {
+                            element.style.backgroundColor = "red";
+                            document.querySelector("#feedback1").innerHTML = "Incorrect";
+                        }
+                    });
+                })
+
+                function countryCheck() {
+                    if (country.value == "Brazil") {
+                        document.querySelector("#country").style.backgroundColor = "green";
+                        document.querySelector("#feedback2").innerHTML = "Correct!";
+                    } else {
+                        document.querySelector("#country").style.backgroundColor = "red";
+                        document.querySelector("#feedback2").innerHTML = "Incorrect";
+                    }
+                }
+
+                document.querySelector("#check").addEventListener("click", countryCheck)
+                document.querySelector("#country").addEventListener("keydown", function() {
+                    if (event.key == "Enter") {
+                        countryCheck()
+                    }
+                })
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is the scientific name for corn?</h3>
+                <button class="answer" id="a">Ustilago maydis</button>
+                <button class="answer" id="b">Glycine max</button>
+                <button class="answer" id="c">Zea mays</button>
+                <button class="answer" id="d">Saccharum officinarum</button>
+                <p id="feedback1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What is the country that produces the most soybeans?</h3>
+                <input autocomplete="off" autofocus id="country" placeholder="Country" type="text">
+                <button id="check">Confirm</button>
+                <p id="feedback2"></p>
+            </div>
+        </div>
+    </body>
+
+</html>
