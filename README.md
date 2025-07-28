@@ -5,5 +5,9 @@ Later on the course we got rid of the "training wheels" and started working more
 **Week 1:** Introduction to C\
 **Week 2:** Arrays\
 **Week 3:** Algorithms\
-**Week 4:** Memory(Basic image and sound manipulation)\
-**Week 5:** Data structures
+**Week 4:** Memory(Image and sound manipulation)\
+**Week 5:** Data structures\
+**Week 6:** Python\
+**Week 7:** SQL\
+**Week 8:** HTML, CSS, JavaScript\
+**Week 9:** Flask
