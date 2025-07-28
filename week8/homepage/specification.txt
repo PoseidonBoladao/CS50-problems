@@ -1,0 +1,35 @@
+HTML tags:
+
+header
+link
+script
+footer
+nav
+a
+svg
+path
+button
+span
+div
+ul
+li
+p
+
+
+CSS properties:
+
+text-align
+background-color
+font-family
+font-weight
+block-size
+padding
+height
+object-fit
+border
+transition
+filter: brightness
+border-radius
+
+
+I used bootstrap to add a carousel and navbar. And used javascript to fetch the navbar to every page.
